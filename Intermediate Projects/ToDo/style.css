@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.main{
+    height: auto;
+    width: 40%;
+    background-color: burlywood;
+    border: brown solid 4px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main>h1{
+    margin: 20px;
+    text-align: center;
+}
+.searchbar{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar>input{
+    width: 60%;
+    height: 30px;
+    margin: 20px;
+}
+.content{
+    height: 100%;
+    width: 100%;
+    margin:10px;
+}
+
+.task{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: solid brown 2px;
+    margin:5px 5px ;    
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+    flex-basis: 60%;
+    text-align: center;
+    margin:5px 5px ;
+    
+}
+.checkbtn{
+    background-color: green;
+    padding: 4px;
+    height: 35px;
+    width: 70px;
+    margin:5px 5px ;
+}
+
+.delbtn{
+    background-color: red;
+    padding: 4px;
+    height: 35px;
+    width: 70px;
+    margin:5px 5px ;
+}
+
+.addbtn{
+    padding: 4px;
+    background-color: brown;
+    color: white;
+    font-size: large;
+}
+.addbtn:hover{
+    background-color: white;
+    color: black;
+}

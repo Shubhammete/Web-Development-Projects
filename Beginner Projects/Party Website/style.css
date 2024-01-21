@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    display: flex;
+}
+
+#part1{
+    height: 100vh;
+    width: 25%;
+    background: rgba(202, 6, 6, 0.907);
+}
+#part2{
+    height: 100vh;
+    width:70%;
+    background-image: url(https://images.unsplash.com/photo-1541257710737-06d667133a53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1885&q=80);
+    background-size:cover ;
+    background-position:center;
+    
+}
+
+#blur{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.221);
+}
+
+#part3{
+    height: 100vh;
+    width: 13%;
+    background: rgb(202, 6, 6);
+}
+
+#text{
+    position: absolute;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    line-height: 6rem;
+    letter-spacing: 15px;
+    /*to create border text color*/
+    -webkit-text-stroke-color: black;
+    /*text border width*/
+    -webkit-text-stroke-width: 2px;
+    transform: translateY(50%) translateX(28%);
+    animation-name: move;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0%{
+        color: white;
+        -webkit-text-stroke-color: black;
+    }
+    100%{
+        color: black;
+        -webkit-text-stroke-color: white;
+    }
+}
+
+.smallimg{
+    position: absolute;
+    background-image: url(https://images.unsplash.com/photo-1508606572321-901ea443707f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1885&q=80);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    width: 20%;
+    top: 30%;
+    left: 68%;
+    border-radius: 20px;
+}
+.sidetext{
+    position: absolute;
+    font-size: 4rem;
+    font-weight: bolder ;
+    color: black;
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+    letter-spacing: 5px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: aliceblue;
+    right: -39%;
+}
+
+.gif{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Ftenor.com%2Fview%2Fparty-hard-anime-party-celebrate-parties-gif-13077041&psig=AOvVaw0A8gNjqJcEzya4KHwhhqda&ust=1697359920701000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPiMwMyU9YEDFQAAAAAdAAAAABAI);
+}

@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.maincontainer{
+    color: white;
+    background: #000;
+    text-align: center;
+}
+h2{
+    font-size: 2.7rem;
+}
+.daily,.Weekly{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    color: white ;
+
+}
+.task li,.time li{
+    border: solid white;
+    color: aliceblue;
+    list-style: none;
+    padding: 10px;
+    background-color: grey;
+}
+
+#ind{
+    background-color: goldenrod;
+}

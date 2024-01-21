@@ -1,0 +1,35 @@
+*{
+    margin:0 ;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+header{
+    height: 20vh;
+    border: solid red 2px;
+    display: flex;
+    background-color: blanchedalmond;
+    justify-content: space-around;
+    align-items: center;
+}
+img{
+    height: 13vh;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+li > a{
+    text-decoration: none;
+    color: black;
+    padding: 1.3rem;
+}
+li a:hover::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: violet;
+    transition:all 3s;
+}
