@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* style for the input form */
+        form {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            background-color: white;
+            height: 16px;
+        }
+
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        /* style for the chatbot reply */
+        #output {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .btn-submit1 {
+            background-color: #008CBA;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+        /* style for the chatbot name */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* style for the chatbot reply box */
+        button.btn-submit1 {
+            display: flex;
+            width: 100%;
+            padding: 120px 544px;
+            background-color: rgba(21, 27, 30, .15);
+            color: black;
+        }
+
+        #output {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        #para {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+
+        .inputPlace {
+            position: relative;
+            top: 500px;
+        }
+
+        .Input {
+            display: flex;
+            width: 100%;
+
+            position: fixed;
+            bottom: 10px
+        }
+
+        #submitKr {
+            height: 40px;
+
+        }
+
+        .inputsubmit {
+            display: flex;
+            width: 100%;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <img src="arrogant.png" alt="error">
+
+    <div class="inputoutput">
+        <div id="output">
+            {% for item in message %}
+
+            <p id="para">{{ item }}</p>
+
+            {% endfor %}
+        </div>
+
+
+        <div class="Input">
+            <form action="/chat" method="post">
+
+                <label for="input"></label>
+                <div class="inputsubmit">
+                    <input type="text" id="input" name="input">
+                    <br>
+                    <button type="submit" id="submitKr"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+<script>
+    submitButton = document.getElementById("submitKr");
+    inputField = document.getElementById("input");
+    displayElement = document.getElementById("display");
+
+
+    submitButton.addEventListener("click", () => {
+        const inputValue = inputField.value;
+        var newElement = document.createElement("p");
+
+        newElement.innerText = inputValue;
+
+
+        displayElement.appendChild(newElement);
+
+
+
+    });
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Menu</title>
+  <script>
+    function loadBlocks() {
+      var block1Div = document.getElementById("block1Div");
+      var block2Div = document.getElementById("block2Div");
+
+      // Fetch the content of block1.html
+      fetch('block1.html')
+        .then(response => response.text())
+        .then(data => {
+          block1Div.innerHTML = data;
+        });
+
+      // Fetch the content of block2.html
+      fetch('block2.html')
+        .then(response => response.text())
+        .then(data => {
+          block2Div.innerHTML = data;
+        });
+    }
+
+    function showResult() {
+      // Your existing code to handle the dropdown selection and display results
+      // ...
+    }
+  </script>
+</head>
+<body onload="loadBlocks()">
+  <select id="myDropdown" onchange="showResult()">
+    <option value="">Select an option</option>
+    <option value="wheat">Wheat</option>
+    <option value="rice">Rice</option>
+    <option value="jowar">Jowar</option>
+  </select>
+
+  <div id="resultDiv"></div>
+  <div id="block1Div"></div>
+  <div id="block2Div"></div>
+</body>
+</html>
